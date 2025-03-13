@@ -11,71 +11,8 @@ body, button {
 
 /* Header  */
 
-:root {
-    --clr-neutral-500: white;
-    --clr-neutral-400: gray;
-    --clr-neutral-300: black;
-}
-
-
-/* .header-one {
-    --__animationStartsAfter: 110vh;
-    --__animationDistance: 120vh;
-    --__surfaceColorStart: hsla(0, 0%, 0%, 1);
-    --__surfaceColorEnd: hsla(0, 0%, 100%, 0.747);
-    --__textColorStart: white;
-    --__textColorEnd: black;
-
-    --__logoAfterAnimation: none;
-
-    padding: 16px 48px;
-    margin-inline: auto;
-    margin-block: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: var(--__headerWidth, auto);
-    color: var(--__textColorStart);
-    backdrop-filter: blur(1rem);
-    background-color: var(--__surfaceColorStart);
-
-    position: sticky;
-    z-index: 1000;
-    top: -5rem;
-    animation: stickyNav linear forwards;
-
-    @supports (animation-timeline: view()) {
-        backdrop-filter: blur(1rem);
-
-        animation-timeline: view();
-        animation-range-start: var(--__animationStartsAfter);
-        animation-range-end: var(--__animationDistance);
-    }
-
-    .gpsr-logo {
-        display: var(--__logoDisplay, block);
-        height: 48px;
-        width: auto;
-    }
-
-    .nav-one-links {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-} */
-
-/* .nav-one-item:nth-child(6) {
-    background: white;
-    padding: 8px 32px;
-    color: darkgreen;
-} */
-
 .header-one {
-    --__animationStartsAfter: 350vh;
+    --__animationStartsAfter: 320vh;
     --__animationDistance: 100vh;
     --__surfaceColorStart: hsla(0, 0%, 0%, 1);
     --__surfaceColorEnd: hsla(0, 0%, 100%, 0.747);
@@ -147,10 +84,7 @@ body, button {
 
 .nav-one-item:hover {
     cursor: pointer;
-    /* color: var(--clr-neutral-400); */
-    /* text-decoration: underline; */
     font-weight: 800;
-    /* color: white; */
     text-underline-offset: 0.171;
     transform: scale(1.2);
 }
@@ -209,7 +143,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 140vh;
+    height: 120vh;
     transform-style: preserve-3d;
     z-index: -1;
 }
@@ -235,7 +169,7 @@ header {
 .midground,
 .foreground {
     position: absolute;
-    height: 140vh;
+    height: 120vh;
     width: 100%;
     object-fit: cover;
     z-index: -1;
