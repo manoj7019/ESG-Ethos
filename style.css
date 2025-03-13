@@ -315,6 +315,8 @@ section {
 }
 
 .envi-impact-slider-section-head h1 {
+    display: flex;
+    gap: 8px;
     color: darkgreen;
 }
 
