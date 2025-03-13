@@ -12,7 +12,7 @@ body, button {
 /* Header  */
 
 .header-one {
-    --__animationStartsAfter: 320vh;
+    --__animationStartsAfter: 360vh;
     --__animationDistance: 100vh;
     --__surfaceColorStart: hsla(0, 0%, 0%, 1);
     --__surfaceColorEnd: hsla(0, 0%, 100%, 0.747);
