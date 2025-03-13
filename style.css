@@ -12,8 +12,8 @@ body, button {
 /* Header  */
 
 .header-one {
-    --__animationStartsAfter: 400vh;
-    --__animationDistance: 100vh;
+    --__animationStartsAfter: 220vh;
+    --__animationDistance: 250vh;
     --__surfaceColorStart: hsla(0, 0%, 0%, 1);
     --__surfaceColorEnd: hsla(0, 0%, 100%, 0.747);
     --__textColorStart: white;
@@ -56,13 +56,22 @@ body, button {
     }
 }
 
-
-
 .header-one a img {
     height: 48px;
     filter: brightness(400%);
-    /* filter: contrast(200%); */
+    animation: fadeEffect linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 150vh;
 }
+
+@keyframes fadeEffect {
+    from {
+      filter: brightness(400%);
+    }
+    to {
+      filter: brightness(100%);
+    }
+  }
 
 .nav-one-item > .nav-one-item-anchor {
     color: inherit;
@@ -90,19 +99,18 @@ body, button {
 }
 
 
-
 @keyframes stickyNav {
     0%, 100% {
-        --__headerWidth: fit-content;
-        --__logoDisplay: none;
+        --__headerWidth: 100%;
+        /* --__logoDisplay: none; */
     }
 
     100% {
-        top: 1rem;
+        top: 0;
         color: var(--__textColorEnd);
         background-color: var(--__surfaceColorEnd);
         box-shadow:0 0 0.75rem hsl(0 0% 0% / 0.3);
-        border-radius: 10px;
+        /* border-radius: 10px; */
         backdrop-filter: blur(1rem);
     }
 }
