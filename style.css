@@ -256,10 +256,12 @@ section {
     padding: 0 64px;
 }
 
-.envi-impact-slider-section-head h1 {
+.envi-impact-slider-section-head h2 {
     display: flex;
     gap: 8px;
+    font-size: 36px;
     color: darkgreen;
+    width: 700px;
 }
 
 button.download-button {
@@ -280,6 +282,29 @@ button.download-button {
 
 button.download-button:hover {
     transform: scale(1.125);
+}
+
+.envi-impact-slider-section-two {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    align-self: flex-start;
+    padding: 32px 64px;
+}
+
+.envi-impact-slider-section-two > p {
+    line-height: 28px;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style-type: none;
+    line-height: 28px;
+    font-size: 18px;
 }
 
 .envi-slider {
@@ -350,20 +375,99 @@ button.download-button:hover {
 
 
 /* Environmental Impact  */
-
-@media screen and (max-width: 768px) {
-    .envi-impact-card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card {
-        width: 50% - 40px;
-    }
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
+
+#icon4 {
+    width: 128px;
+    height: 128px;
+}
+/* section {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+} */
+
+.jv-center {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    scroll-snap-align: center;
+}
+
+.jv-content {
+    width: 100vh;
+    height: 100vw;
+    position: relative;
+    transform-origin: left top;
+    transform: rotateZ(-90deg) translateX(-100%);
+    overflow: auto;
+    gap: 24px;
+}
+
+.jv-nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* mix-blend-mode: difference; */
+    z-index: 3;
+}
+
+.jv-logo {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(90deg);
+}
+
+.jv-title {
+    font-size: 48px;
+    margin: 0 20px;
+    z-index: 3;
+    font-weight: 600;
+}
+
+.jv-page {
+    z-index: 2;
+    width: 100vh;
+    height: 33.3333vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    /* background: white;
+    color: black; */
+}
+
+/* .jv-page:nth-child(even) {
+    background: black;
+    color: white;
+} */
+
+.jv-page-content {
+    transform: rotate(90deg);
+}
+
+.jv-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Envi Impact Cards  */
 
 .envi-impact-card {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 500px;
     transform-style: preserve-3d;
     transition: transform 0.5s;
     cursor: pointer;
@@ -385,12 +489,11 @@ button.download-button:hover {
     font-size: 24px;
     padding: 0 32px;
     text-align: center;
-    margin-top: -400px;
-    color: black;
+    margin-top: 00px;
+    /* color: black; */
 }
 
 .envi-impact-card-front {
-    background-color: #001831;
     display: flex;
     /* padding: 16px; */
     justify-content: center;
@@ -401,15 +504,23 @@ button.download-button:hover {
     transform: rotate(0deg);
 }
 
+.envi-impact-card-front img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    border-radius: 8px;
+}
+
 .envi-impact-card-back {
-    background-color: #000;
-    color: white;
+    /* background-color: #000; */
+    /* color: white; */
     padding: 16px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     /* color: white; */
-    /* padding: 32px; */
+    padding: 32px;
     transform: rotateY(180deg);
 }
 
@@ -428,6 +539,7 @@ button.download-button:hover {
     /* justify-content: space-between; */
     align-items: center;
     font-weight: 500;
+    font-size: 18px;
     padding: 0;
     margin: 0;
 }
@@ -452,25 +564,33 @@ button.download-button:hover {
     transform: rotateY(180deg);
     transition: all 0.01s ease;
 }
+.envi-impact-card6:hover {
+    transform: rotateY(180deg);
+    transition: all 0.01s ease;
+}
 
 .envi-impact-card1 > .envi-impact-card-front {
-    background-image:url(./images/envi-impact\ 1.jpg) ;
+    background-image:url(./images/clean\ water\ and\ sanitation.jpg) ;
     background-size: 100% 100%;
 }
 .envi-impact-card2 > .envi-impact-card-front {
-    background-image:url(./images/envi-impact\ 2.jpg) ;
+    background-image:url(./images/affordable\ and\ clean\ energy.jpg) ;
     background-size: 100% 100%;
 }
 .envi-impact-card3 > .envi-impact-card-front {
-    background-image:url(./images/envi-impact\ 3.jpg) ;
+    background-image:url(./images/sustainable\ cities\ and\ communities.jpg) ;
     background-size: 100% 100%;
 }
 .envi-impact-card4 > .envi-impact-card-front {
-    background-image:url(./images/envi-impact\ 4.jpg) ;
+    background-image:url(./images/climate\ action.jpg) ;
     background-size: 100% 100%;
 }
 .envi-impact-card5 > .envi-impact-card-front {
-    background-image:url(./images/envi-impact\ 5.jpg) ;
+    background-image:url(./images/decent\ work\ and\ economic\ growth.jpg) ;
+    background-size: 100% 100%;
+}
+.envi-impact-card6 > .envi-impact-card-front {
+    background-image:url(./images/responsible\ consumption\ and\ production.jpg) ;
     background-size: 100% 100%;
 }
 
